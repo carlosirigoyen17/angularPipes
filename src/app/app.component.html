@@ -1,21 +1,219 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="container">
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Variable</th>
+        <th scope="col">Pipe</th>
+        <th scope="col">Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td> {{ nombre }} </td>
+        <td> <strong> uppercase </strong>  </td>
+        <td> {{ nombre | uppercase }} </td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td> {{ nombre }} </td>
+        <td> <strong> lowercase </strong>  </td>
+        <td> {{ nombre | lowercase }} </td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td> {{ nombre }} </td>
+        <td> <strong> slice:3 </strong>  </td>
+        <td> {{ nombre | slice:3 }} </td>
+      </tr>  
+      <tr>
+        <th scope="row">4</th>
+        <td> {{ nombre }} </td>
+        <td> <strong> slice:0:3 </strong>  </td>
+        <td> {{ nombre | slice:0:3 }} </td>
+      </tr>  
+      <tr>
+        <th scope="row">5</th>
+        <td> {{ arreglo }} </td>
+        <td> <strong> slice:1:5 </strong>  </td>
+        <td> {{ arreglo | slice:1:5 }} </td>
+      </tr>   
+      <tr>
+        <th scope="row">6</th>
+        <td> {{ arreglo }} </td>
+        <td> <strong>  slice2:4 </strong> </td>
+        <td> {{ arreglo | slice:2:4 }} </td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td> {{ arreglo }} </td>
+        <td> <strong> slice:-4 </strong>  </td>
+        <td> {{ arreglo | slice:-4 }} </td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td> {{ arreglo }} </td>
+        <td> <strong> slice:-4:-2 </strong>  </td>
+        <td> {{ arreglo | slice:-4:-2 }} </td>
+      </tr>      
+      <tr>
+        <th scope="row">9</th>
+        <td> {{ numeroPi }} </td>
+        <td> <strong> number </strong>  </td>
+        <td> {{ numeroPi | number }} </td>
+      </tr> 
+      <tr>
+        <th scope="row">10</th>
+        <td> {{ numeroPi }} </td>
+        <td> <strong> number:'2.0-4' </strong>  </td>
+        <td> {{ numeroPi | number:'2.0-4' }} </td>
+      </tr> 
+      <tr>
+        <th scope="row">11</th>
+        <td> {{ numeroPi }} </td>
+        <td> <strong> number:'2.0-2' </strong> </td>
+        <td> {{ numeroPi | number:'1.0-2' }} </td>
+      </tr> 
+      <tr>
+        <th scope="row">12</th>
+        <td> {{ numero }} </td>
+        <td> <strong> number:'1.3-3' </strong>  </td>
+        <td> {{ numero | number:'1.3-3' }} </td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td> {{ numero }} </td>
+        <td> <strong> number:'3.0-0' </strong>  </td>
+        <td> {{ numero | number:'3.0-0' }} </td>
+      </tr>
+      <tr>
+        <th scope="row">14</th>
+        <td> {{ numero }} </td>
+        <td> <strong> percent </strong>  </td>
+        <td> {{ numero | percent }} </td>
+      </tr>
+      <tr>
+        <th scope="row">15</th>
+        <td> {{ numero }} </td>
+        <td> <strong> percent:'1.0-2' </strong>  </td>
+        <td> {{ numero | percent:'1.0-2' }} </td>
+      </tr>
+      <tr>
+        <th scope="row">16</th>
+        <td> {{ numero2 }} </td>
+        <td> <strong> percent:'3.0-0' </strong>  </td>
+        <td> {{ numero2 | percent:'3.0-0' }} </td>
+      </tr>
+      <tr>
+        <th scope="row">17</th>
+        <td> {{ numero2 }} </td>
+        <td> <strong> percent:'1.0-3' </strong>  </td>
+        <td> {{ numero2 | percent:'1.0-3' }} </td>
+      </tr>
+      <tr>
+        <th scope="row">18</th>
+        <td> {{ numero2 }} </td>
+        <td> <strong> percent:'4.0-3' </strong>  </td>
+        <td> {{ numero2 | percent:'4.0-3' }} </td>
+      </tr>
+      <tr>
+        <th scope="row">19</th>
+        <td> {{ precio1 }} </td>
+        <td> <strong> currency </strong>  </td>
+        <td> {{ precio1 | currency }} </td>
+      </tr>
+      <tr>
+        <th scope="row">20</th>
+        <td> {{ precio1 }} </td>
+        <td> <strong> currency:'CLP':'symbol' </strong>  </td>
+        <td> {{ precio1 | currency:'CLP':'symbol' }} </td>
+      </tr>                                                       
+      <tr>
+        <th scope="row">21</th>
+        <td> {{ precio1 }} </td>
+        <td> <strong> currency:'CLP':'symbol-narrow' </strong>  </td>
+        <td> {{ precio1 | currency:'CLP':'symbol-narrow' }} </td>
+      </tr>
+      <tr>
+        <th scope="row">22</th>
+        <td> {{ precio2 }} </td>
+        <td> <strong> currency:'EUR':'symbol-narrow' </strong>  </td>
+        <td> {{ precio2 | currency:'EUR':'symbol-narrow' }} </td>
+      </tr>  
+      <tr>
+        <th scope="row">23</th>
+        <td> {{ precio2 }} </td>
+        <td> <strong> currency:'EUR':'code':'2.0-3' </strong>  </td>
+        <td> {{ precio2 | currency:'EUR':'code':'2.0-3' }} </td>
+      </tr> 
+      <tr>
+        <th scope="row">24</th>
+        <td> {{ fullName }} </td>
+        <td> <strong> titlecase </strong>  </td>
+        <td> {{ fullName | titlecase }} </td>
+      <tr>
+        <th scope="row">25</th>
+        <td> {{ fullName }} </td>
+        <td> <strong> Custom Uppercase 2 y 3 </strong>  </td>
+        <td> {{ fullName | customuppercase }} </td>        
+      </tr>
+      <tr>
+        <th scope="row">25</th>
+        <td> {{ fullName }} </td>
+        <td> <strong> Custom Uppercase 2 y 3 : true </strong>  </td>
+        <td> {{ fullName | customuppercase:true }} </td>        
+      </tr>
+      <tr>
+        <th scope="row">26</th>
+        <td>
+          <input type="text" placeholder="Contrasena" (keyup)="fijarClave(clave.value)" #clave />
+        </td>
+        <td> 
+          <small> 
+            Contraseña: {{ active }}
+          </small> 
+          <br>
+          <small> 
+            Contraseña Original: {{ claveFija }}
+          </small> 
+          <br>
+          <button (click)="active = !active" type="button" class="btn btn-outline-primary">
+            Activar/Desactivar
+          </button>
+        </td>
+        <td> 
+          {{ claveFija | passwordhide:active }}
+        </td>
+      </tr>                                
+    </tbody>
+  </table>
+
+  <br><hr>
+  <h4>Slice con *ngFor -- slice:5:20</h4>
+  <h5><small> {{ arreglo2 }} </small></h5>
+  <ul>
+    <li *ngFor="let item of arreglo2 | slice:5:20"> {{ item }} </li>
+  </ul>
+
+  <br><hr>
+  <h4>Pipe json</h4>
+  <h5> Sin json y pre <pre> {{ hero }} </pre></h5>
+  <h5> Con json y pre <pre> {{ hero | json}} </pre></h5>
+
+  <br><hr>
+  <h4>Pipe Async</h4>
+  <h5> Sin Async <small> {{ valorPromesa }} </small></h5>
+  <h5> Con Async <small> {{ valorPromesa | async}} </small></h5>
+
+  <br><hr>
+  <h4>Pipe Custom</h4>
+  <iframe width="560" height="315" [src]="videoUrl | domsafe:youtubeUrl" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
 
 <router-outlet></router-outlet>

@@ -4,9 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// Pipes
+import { CustomuppercasePipe } from './pipes/customuppercase.pipe';
+import { DomsafePipe } from './pipes/domsafe.pipe';
+import { PasswordhidePipe } from './pipes/passwordhide.pipe';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomuppercasePipe,
+    DomsafePipe,
+    PasswordhidePipe,
   ],
   imports: [
     BrowserModule,
